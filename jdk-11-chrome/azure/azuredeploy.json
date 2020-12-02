@@ -81,7 +81,7 @@
             "name": "[parameters('name')]",
             "properties": {
               "image": "[parameters('image')]",
-              "ports": [ ],
+              "ports": [ {"port" : "80"} ],
               "resources": {
                 "requests": {
                   "cpu": "[parameters('cpuCores')]",
