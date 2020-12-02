@@ -83,8 +83,8 @@
       "name": "[parameters('name')]",
       "location": "[parameters('location')]",
       "copy": {
-       "name": "[concat(parameters('name'), copyIndex(1))]",
-        "count": "[length(parameters('scaleInstances'))]"
+       "name": "robot-copy",
+        "count": "[parameters('scaleInstances')]"
       },
       "properties": {
         "containers": [
