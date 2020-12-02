@@ -109,7 +109,10 @@
         "restartPolicy": "[parameters('restartPolicy')]",
         "ipAddress": {
           "type": "Public",
-          "ports": [           ]
+          "ports": [ {
+              "protocol": "Tcp",
+              "port": "80"
+            }]
         }
       }
     }
