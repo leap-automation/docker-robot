@@ -96,13 +96,13 @@
                             "image": "[parameters('image')]",
                             "ports": [
                                 {
-                                    "port": "80"
+                                    "port": 80
                                 }
                             ],
                             "resources": {
                                 "requests": {
                                     "cpu": "[parameters('cpuCores')]",
-                                    "memoryInGb": "[parameters('memoryInGb')]"
+                                    "memoryInGB": "[parameters('memoryInGb')]"
                                 }
                             },
                             "environmentVariables": [
@@ -128,8 +128,8 @@
                     "type": "Public",
                     "ports": [
                         {
-                            "protocol": "Tcp",
-                            "port": "80"
+                            "protocol": "TCP",
+                            "port": 80
                         }
                     ]
                 }
@@ -141,7 +141,7 @@
             "type": "array",
             "copy": {
                 "count": "[parameters('scaleInstances')]",
-                "value": "[reference(resourceId('Microsoft.ContainerInstance/containerGroups/', concat('robot-' , copyIndex(1)))).ipAddress.ip]"
+                "input": "[reference(resourceId('Microsoft.ContainerInstance/containerGroups/', concat('robot-' , copyIndex(1)))).ipAddress.ip]"
             }
         }
     }
