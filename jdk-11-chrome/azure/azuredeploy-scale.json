@@ -85,7 +85,7 @@
       "copy": {
        "name": "[concat(parameters('name'), copyIndex(1))]",
         "count": "[length(parameters('scaleInstances'))]"
-      }
+      },
       "properties": {
         "containers": [
           {
