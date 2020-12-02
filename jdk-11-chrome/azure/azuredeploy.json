@@ -61,7 +61,7 @@
       "metadata": {
         "description": "Leap execution service host"
       }
-    }, "LEAP_ROBOT_HOST": {
+    }, "LEAP_ROBOT_TOKEN": {
       "type": "string",
       "defaultValue": "",
       "metadata": {
